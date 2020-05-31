@@ -3,13 +3,13 @@ attr_accessor :name, :age
 
 @@all = [ ]
 
-def initialize(name, age)
+def initialize(name, age) #initializes w a name and age
   @name = name
   @age = age
 @@all << self
 end
 
-def self.all
+def self.all #returns the contents of @@all
   @@all
 end
 
