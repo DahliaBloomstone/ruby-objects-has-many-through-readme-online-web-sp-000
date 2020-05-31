@@ -18,14 +18,14 @@ Meal.new(self, customer, total, tip) #provided a customer instance and a total a
 end
 
   def meals #returns an array of Meal instances associated with the waiter
-    Meal.all.select do |meal| #by iterating over each meal the waiter has given 
+    Meal.all.select do |meal| #by iterating over each meal the waiter has given
       meal.waiter == self
     end
   end
 
-def best_tipper #returns the Customer instance associated with the meal that recieved the largest tip 
-  best_tipped_meal = meals.max do |meal_a, meal_b| #iterating to find the max between two meals 
-    meal_a.tip <=> meal_b.tip #comparing the meals 
+def best_tipper #returns the Customer instance associated with the meal that recieved the largest tip
+  best_tipped_meal = meals.max do |meal_a, meal_b| #iterating to find the max between two meals
+    meal_a.tip <=> meal_b.tip #comparing the meals
 end
     best_tipped_meal.customer #returning the best tipper by calling on the customer 
   end
