@@ -1,7 +1,7 @@
 class Waiter
   attr_accessor :name, :years
 
-@@all = [ ]
+@@all = [ ] #creates a new empty array
 
 def initialize(name, years)
   @name = name
@@ -9,12 +9,12 @@ def initialize(name, years)
   @@all << self
 end
 
-def self.all
+def self.all #class method that returns the contents of @@all
   @@all
 end
 
-def new_meal(customer, total, tip=0)
-Meal.new(self, customer, total, tip)
+def new_meal(customer, total, tip=0) #initializes a meal using the current Waiter instance
+Meal.new(self, customer, total, tip) #provided a customer instance and a total and a tip 
 end
 
   def meals
