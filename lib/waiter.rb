@@ -17,7 +17,7 @@ def new_meal(customer, total, tip=0) #initializes a meal using the current Waite
 Meal.new(self, customer, total, tip) #provided a customer instance and a total and a tip
 end
 
-  def meals #returns an array of Meal instances associated with the waiter
+  def meals #returns an array of Meal instances associated with the waiter (all meals the waiter has served)
     Meal.all.select do |meal| #by iterating over each meal the waiter has given
       meal.waiter == self #checking for waiter now
     end
