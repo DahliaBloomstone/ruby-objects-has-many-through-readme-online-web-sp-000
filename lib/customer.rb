@@ -17,14 +17,14 @@ def new_meal(waiter, total, tip=0) #initializes a meal using the current Custome
   Meal.new(waiter, self, total, tip) #provided a Waiter instance, a total, and a tip
 end
 
-def meals #returns an array of meal instances associated with this customer
-  Meal.all.select do |meal| #by iteration over every meal the customer had 
+def meals #returns an array of Meal instances associated with this customer
+  Meal.all.select do |meal| #by iteration over every meal the customer had
     meal.customer == self
   end
 end
 
-def waiters
-  meals.map do |meal|
+def waiters #returns an array of Waiter instances
+  meals.map do |meal| #by iterating over each meal the waiter gave 
     meal.waiter
   end
 end
