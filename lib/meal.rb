@@ -1,4 +1,5 @@
-#the meal class knows all the details of each meal instance 
+#the meal class knows all the details of each meal instance.
+#the meal class joins the customer and waiter class. 
 class Meal
   attr_accessor :waiter, :customer, :total, :tip
 
