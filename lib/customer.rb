@@ -1,7 +1,7 @@
 class Customer
 attr_accessor :name, :age
 
-@@all = [ ]
+@@all = [ ] #creates a new array of instances 
 
 def initialize(name, age) #initializes w a name and age
   @name = name
@@ -24,7 +24,7 @@ def meals #returns an array of Meal instances associated with this customer
 end
 
 def waiters #returns an array of Waiter instances
-  meals.map do |meal| #by iterating over each meal the waiter gave 
+  meals.map do |meal| #by iterating over each meal the waiter gave
     meal.waiter
   end
 end
