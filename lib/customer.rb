@@ -22,13 +22,13 @@ def new_meal(waiter, total, tip=0) #initializes a meal using the current Custome
 end #self: we don't need a customer argument because we are passing in self as a reference to the current instance of customer.
 
 
-def meals #returns an array of Meal instances associated with this customer
+def meals #returns an array of Meal instances associated with this customer (all meals customer had)
   Meal.all.select do |meal| #by iteration over every meal the customer had
     meal.customer == self
   end
 end
 
-def waiters #returns an array of waiters 
+def waiters #returns an array of waiters
   meals.map do |meal| #by iterating over each meal the waiter gave
     meal.waiter
   end
