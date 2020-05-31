@@ -22,7 +22,6 @@ end
       meal.waiter == self
     end
   end
-end
 
 
 end
