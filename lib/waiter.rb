@@ -14,11 +14,11 @@ def self.all #class method that returns the contents of @@all
 end
 
 def new_meal(customer, total, tip=0) #initializes a meal using the current Waiter instance
-Meal.new(self, customer, total, tip) #provided a customer instance and a total and a tip 
+Meal.new(self, customer, total, tip) #provided a customer instance and a total and a tip
 end
 
-  def meals
-    Meal.all.select do |meal|
+  def meals #returns an array of Meal instances associated with the waiter
+    Meal.all.select do |meal| #by iterating over each meal the waiter has given 
       meal.waiter == self
     end
   end
