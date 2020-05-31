@@ -3,7 +3,7 @@ class Waiter
 
 @@all = [ ] #creates a new empty array
 
-def initialize(name, years) #the Waiter class  has a class variable that stores every waiter instance upon initialization 
+def initialize(name, years) #the Waiter class  has a class variable that stores every waiter instance upon initialization
   @name = name
   @years = years
   @@all << self
@@ -19,7 +19,7 @@ end
 
   def meals #returns an array of Meal instances associated with the waiter
     Meal.all.select do |meal| #by iterating over each meal the waiter has given
-      meal.waiter == self
+      meal.waiter == self #checking for waiter now
     end
   end
 
