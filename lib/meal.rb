@@ -1,7 +1,8 @@
+#the meal class knows all the details of each meal instance 
 class Meal
   attr_accessor :waiter, :customer, :total, :tip
 
-  @@all = [ ] #creates a new array that can be returned with contents 
+  @@all = [ ] #creates a new array that can be returned with contents
 
 def initialize(waiter, customer, total, tip)
   @waiter = waiter
