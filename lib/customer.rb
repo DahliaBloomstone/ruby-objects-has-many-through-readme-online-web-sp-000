@@ -1,5 +1,8 @@
 class Customer
-attr_accessor :name, :age
+attr_accessor :name, :age #each customer instance has a name and age 
+#attr_accessor allows for customer to change their name and age 
+#attr_reader would not allow for a customer to change their name and age
+
 
 @@all = [ ] #creates a new array of instances 
 
