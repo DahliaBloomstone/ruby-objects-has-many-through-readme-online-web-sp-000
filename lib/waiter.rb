@@ -3,7 +3,7 @@ class Waiter
 
 @@all = [ ] #creates a new empty array
 
-def initialize(name, years)
+def initialize(name, years) #the Waiter class  has a class variable that stores every waiter instance upon initialization 
   @name = name
   @years = years
   @@all << self
@@ -27,7 +27,7 @@ def best_tipper #returns the Customer instance associated with the meal that rec
   best_tipped_meal = meals.max do |meal_a, meal_b| #iterating to find the max between two meals
     meal_a.tip <=> meal_b.tip #comparing the meals
 end
-    best_tipped_meal.customer #returning the best tipper by calling on the customer 
+    best_tipped_meal.customer #returning the best tipper by calling on the customer
   end
 
 
