@@ -19,7 +19,8 @@ end
 #ability to create a meal:
 def new_meal(waiter, total, tip=0) #initializes a meal using the current Customer instance
   Meal.new(waiter, self, total, tip) #provided a Waiter instance, a total, and a tip
-end
+end #self: we don't need a customer argument because we are passing in self as a reference to the current instance of customer.
+
 
 def meals #returns an array of Meal instances associated with this customer
   Meal.all.select do |meal| #by iteration over every meal the customer had
