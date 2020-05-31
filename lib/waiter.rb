@@ -23,6 +23,5 @@ end
     end
   end
 
-def best_tipper 
 
 end
