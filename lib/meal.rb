@@ -1,7 +1,7 @@
 class Meal
   attr_accessor :waiter, :customer, :total, :tip
 
-  @@all = [ ]
+  @@all = [ ] #creates a new array that can be returned with contents 
 
 def initialize(waiter, customer, total, tip)
   @waiter = waiter
@@ -11,8 +11,8 @@ def initialize(waiter, customer, total, tip)
   @@all << self
 end
 
-def self.all
+def self.all #is a class method that returns the contents of @@all array
   @@all
 end
 
-end 
+end
