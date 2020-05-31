@@ -28,7 +28,7 @@ def meals #returns an array of Meal instances associated with this customer
   end
 end
 
-def waiters #returns an array of Waiter instances
+def waiters #returns an array of waiters 
   meals.map do |meal| #by iterating over each meal the waiter gave
     meal.waiter
   end
