@@ -23,11 +23,11 @@ end
     end
   end
 
-def best_tipper
-  best_tipped_meal = meals.max do |meal_a, meal_b|
-    meal_a.tip <=> meal_b.tip
+def best_tipper #returns the Customer instance associated with the meal that recieved the largest tip 
+  best_tipped_meal = meals.max do |meal_a, meal_b| #iterating to find the max between two meals 
+    meal_a.tip <=> meal_b.tip #comparing the meals 
 end
-    best_tipped_meal.customer
+    best_tipped_meal.customer #returning the best tipper by calling on the customer 
   end
 
 
