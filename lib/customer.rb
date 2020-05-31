@@ -44,12 +44,9 @@ end
 #sam.new_meal(alex, 20, 3) # A Customer creates a Meal, passing in a Waiter instance
 #pat.new_meal(sam, 30, 5) # A Waiter creates a Meal, passing in a Customer instance
 
-#alex = Customer.new("Alex", 30)
 #rachel = Customer.new("Rachel", 27)
-#dan = Waiter.new("Dan", 3)
 
-#rachel.new_meal(dan, 50, 10)
-#alex.new_meal(dan, 30, 5)
+#rachel.new_meal(dan, 50, 10) #call meal method on her customer instance
 
 #rachel.meals #=> [#<Meal:0x00007fa23f1575a0 @waiter=#<Waiter:0x00007fa23f14fbe8 @name="Dan", @yrs_experience=22>, @customer=#<Customer:0x00007fa240987468 @name="Rachel", @age=27>, @total=50, @tip=10>]
 #rachel.meals.length #=> 1
